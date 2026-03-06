@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Investigadores Santa Aurora</title>
+
+<style>
+
+body{
+background-color:black;
+background-image:url("imagens/matrix.gif");
+background-repeat:repeat;
+background-attachment:fixed;
+color:#00ff00;
+font-family:Verdana, Arial, sans-serif;
+padding:20px;
+}
+
+h1{
+color:red;
+font-family:"Courier New", monospace;
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+h1 img{
+width:60px;
+}
+
+h2{
+color:yellow;
+}
+
+a{
+color:cyan;
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+hr{
+border:1px solid #333;
+}
+
+.caso{
+margin-bottom:50px;
+display:flex;
+align-items:flex-start;
+}
+
+.caso img{
+width:300px;
+margin-right:20px;
+cursor:pointer;
+}
+
+footer{
+margin-top:40px;
+border-top:1px solid #333;
+padding-top:10px;
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>
+<img src="imagens/santa aurora.png">
+Investigadores Santa Aurora
+</h1>
+
+<p>Bem-vindo ao arquivo histórico da equipe. Aqui estão alguns dos casos antigos resolvidos (ou quase) pelos nossos investigadores.</p>
+
+<!-- texto invisível -->
+<p style="color:black">
+Eles observam o lago à noite.
+</p>
+
+<!-- Caso 1 -->
+
+<div class="caso">
+
+<img src="imagens/escola.png" alt="Escola">
+
+<div>
+
+<h2>Escola Assombrada</h2>
+
+<p>
+Relato de alunos sobre barulhos noturnos, risadas e sombras estranhas. Após investigação, constatou-se que eram apenas gatos, encanamentos e a imaginação coletiva. 
+Mesmo assim, a população considerou o caso assustador e a prefeitura registrou como “resolvido com êxito”. 
+Os investigadores documentaram tudo, incluindo depoimentos detalhados que hoje servem de estudo.
+(talvez fosse so crianças)
+</p>
+
+</div>
+</div>
+
+<!-- Caso 2 -->
+
+<div class="caso">
+
+<img src="imagens/hospital.png" alt="Hospital">
+
+<div>
+
+<h2>Hospital Fantasma</h2>
+
+<p>
+Pacientes e funcionários relataram aparições e vozes estranhas à noite. Investigação revelou falhas na iluminação, correntes de ar e manutenção mal feita. 
+Apesar disso, o caso virou lenda urbana e a população ainda ri da situação. Os investigadores registraram todos os passos e a prefeitura arquivou oficialmente como “sem ocorrência paranormal confirmada”.
+</p>
+
+</div>
+</div>
+
+<!-- Caso 3 -->
+
+<div class="caso">
+
+<img src="imagens/poco.png" alt="Poço" id="poco">
+
+<div>
+
+<h2>Barulho do Poço</h2>
+
+<p>
+Moradores ouviram sons estranhos vindos do antigo poço da cidade. Investigação revelou que eram encanamentos antigos e lixo acumulado. 
+Ainda assim, o caso ganhou fama e os jovens adoraram zombar dos investigadores.Mas o Caso é completamente sério.
+</p>
+
+</div>
+</div>
+
+<!-- Caso 4 -->
+
+<div class="caso">
+
+<img src="imagens/ritual.png" alt="Ritual">
+
+<div>
+
+<h2>Ritual Misterioso</h2>
+
+<p>
+Grupo de jovens realizou rituais estranhos em praça pública. Investigação confirmou que eram encenações teatrais sem qualquer ligação com práticas perigosas. 
+A população ficou preocupada, mas a prefeitura não tomou medidas adicionais. Os investigadores registraram cada detalhe com rigor, documentando toda a atividade.
+</p>
+
+</div>
+</div>
+
+<hr>
+
+<footer>
+
+Contato oficial da equipe:  
+<a href="mailto:investigadoresSANTA@gmail.com">investigadoresSANTA@gmail.com</a>
+
+</footer>
+
+<!-- áudio secreto -->
+
+<audio id="morseAudio" src="audio/codigoMorse.mp3" preload="auto"></audio>
+
+<script>
+
+// mensagem secreta no console
+
+console.log("Se você está lendo isso, significa que está procurando mais fundo.");
+console.log("Nem todos os relatórios foram publicados.");
+console.log("Procure onde a cidade guarda sua água.");
+
+// clique no poço abre relatório
+
+document.getElementById("poco").addEventListener("click",function(){
+window.open("relatorio.html","_blank");
+});
+
+// áudio secreto hospital
+
+const morseAudio=document.getElementById("morseAudio");
+const hospitalImg=document.querySelector('img[alt="Hospital"]');
+
+hospitalImg.addEventListener("click",function(){
+morseAudio.currentTime=0;
+morseAudio.play();
+});
+
+</script>
+<!-- FORÇAR DEPLOY: atualização de teste -->
+
+</body>
+<!-- FORÇAR DEPLOY: atualização de teste -->
+</html>
+
+<!-- atualização forçada -->
