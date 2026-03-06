@@ -4,64 +4,129 @@
 <meta charset="UTF-8">
 <title>Investigadores Santa Aurora</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-
-body{
-background-color:black;
-background-image:url("imagens/matrix.gif");
-background-repeat:repeat;
-background-attachment:fixed;
-color:#00ff00;
-font-family:Verdana, Arial, sans-serif;
-padding:20px;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1{
-color:red;
-font-family:"Courier New", monospace;
-display:flex;
-align-items:center;
-gap:15px;
+/* Corpo do site */
+body {
+  background-color: #0b0b0b;
+  background-image: url("imagens/matrix.gif");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: #00ff00;
+  font-family: "Lucida Console", Monaco, monospace;
+  padding: 20px;
+  line-height: 1.6;
 }
 
-h1 img{
-width:60px;
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-h2{
-color:yellow;
+header img {
+  width: 120px;
+  display: block;
+  margin: 0 auto 15px auto;
 }
 
-a{
-color:cyan;
-text-decoration:none;
+header h1 {
+  color: #ff3333;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2.2em;
+  margin-bottom: 10px;
 }
 
-a:hover{
-text-decoration:underline;
+/* Introdução */
+header p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1em;
+  color: #00ffcc;
 }
 
-hr{
-border:1px solid #333;
+/* Casos */
+.caso {
+  background-color: rgba(0,0,0,0.6);
+  border: 1px solid #333;
+  padding: 15px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-radius: 10px;
+  transition: transform 0.2s;
 }
 
-.caso{
-margin-bottom:50px;
-display:flex;
-align-items:flex-start;
+.caso:hover {
+  transform: scale(1.02);
 }
 
-.caso img{
-width:300px;
-margin-right:20px;
-cursor:pointer;
+.caso img {
+  width: 250px;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
-footer{
-margin-top:40px;
-border-top:1px solid #333;
-padding-top:10px;
-font-size:14px;
+.caso-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.caso h2 {
+  color: #ffff33;
+  font-family: "Courier New", monospace;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.caso p {
+  font-size: 1em;
+  text-align: justify;
+  color: #00ffcc;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 0.9em;
+}
+
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .caso {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .caso img {
+    width: 80%;
+  }
+
+  .caso-content {
+    width: 100%;
+  }
 }
 
 </style>
@@ -69,134 +134,93 @@ font-size:14px;
 
 <body>
 
-<h1>
-<img src="imagens/santa aurora.png">
-Investigadores Santa Aurora
-</h1>
-
-<p>Bem-vindo ao arquivo histórico da equipe. Aqui estão alguns dos casos antigos resolvidos (ou quase) pelos nossos investigadores.</p>
-
-<!-- texto invisível -->
-<p style="color:black">
-Eles observam o lago à noite.
-</p>
+<header>
+  <img src="imagens/santa aurora.png" alt="Logo Santa Aurora">
+  <h1>Investigadores Santa Aurora</h1>
+  <p>Bem-vindo ao arquivo histórico da equipe. Aqui estão alguns dos casos antigos resolvidos (ou quase) pelos nossos investigadores, com relatórios detalhados, observações meticulosas e registros completos de atividades suspeitas em Santa Aurora.</p>
+</header>
 
 <!-- Caso 1 -->
-
 <div class="caso">
-
-<img src="imagens/escola.png" alt="Escola">
-
-<div>
-
-<h2>Escola Assombrada</h2>
-
-<p>
-Relato de alunos sobre barulhos noturnos, risadas e sombras estranhas. Após investigação, constatou-se que eram apenas gatos, encanamentos e a imaginação coletiva. 
-Mesmo assim, a população considerou o caso assustador e a prefeitura registrou como “resolvido com êxito”. 
-Os investigadores documentaram tudo, incluindo depoimentos detalhados que hoje servem de estudo.
-(talvez fosse so crianças)
-</p>
-
-</div>
+  <img src="imagens/escola.png" alt="Escola">
+  <div class="caso-content">
+    <h2>Escola Assombrada</h2>
+    <p>
+    Relatos consistentes de alunos sobre barulhos noturnos, risadas e aparições sombreadas motivaram uma investigação detalhada. 
+    Utilizando sensores de som, registros de horários e entrevistas, constatou-se que os fenômenos eram atribuíveis a gatos, vibrações nos encanamentos e processos imaginativos de grupos de estudantes. 
+    Ainda assim, o caso é considerado valioso para estudo de psicologia coletiva e foi arquivado oficialmente como “resolvido com êxito”.
+    </p>
+  </div>
 </div>
 
 <!-- Caso 2 -->
-
 <div class="caso">
-
-<img src="imagens/hospital.png" alt="Hospital">
-
-<div>
-
-<h2>Hospital Fantasma</h2>
-
-<p>
-Pacientes e funcionários relataram aparições e vozes estranhas à noite. Investigação revelou falhas na iluminação, correntes de ar e manutenção mal feita. 
-Apesar disso, o caso virou lenda urbana e a população ainda ri da situação. Os investigadores registraram todos os passos e a prefeitura arquivou oficialmente como “sem ocorrência paranormal confirmada”.
-</p>
-
-</div>
+  <img src="imagens/hospital.png" alt="Hospital">
+  <div class="caso-content">
+    <h2>Hospital Fantasma</h2>
+    <p>
+    Pacientes e funcionários relataram aparições e vozes estranhas durante horários noturnos. 
+    A equipe investigativa utilizou análise de iluminação, verificação de correntes de ar e inspeção de manutenção. 
+    O resultado apontou causas totalmente naturais, mas o caso se transformou em lenda urbana. Os registros detalhados permanecem como estudo de percepção humana em ambientes hospitalares.
+    </p>
+  </div>
 </div>
 
 <!-- Caso 3 -->
-
 <div class="caso">
-
-<img src="imagens/poco.png" alt="Poço" id="poco">
-
-<div>
-
-<h2>Barulho do Poço</h2>
-
-<p>
-Moradores ouviram sons estranhos vindos do antigo poço da cidade. Investigação revelou que eram encanamentos antigos e lixo acumulado. 
-Ainda assim, o caso ganhou fama e os jovens adoraram zombar dos investigadores.Mas o Caso é completamente sério.
-</p>
-
-</div>
+  <img src="imagens/poco.png" alt="Poço" id="poco">
+  <div class="caso-content">
+    <h2>Barulho do Poço</h2>
+    <p>
+    Sons estranhos provenientes do antigo poço da cidade foram analisados com equipamentos acústicos. 
+    Descobriu-se que encanamentos antigos e resíduos acumulados eram responsáveis. 
+    O caso, embora técnico, gerou grande repercussão entre jovens locais. 
+    Clique no poço para visualizar o relatório completo.
+    </p>
+  </div>
 </div>
 
 <!-- Caso 4 -->
-
 <div class="caso">
-
-<img src="imagens/ritual.png" alt="Ritual">
-
-<div>
-
-<h2>Ritual Misterioso</h2>
-
-<p>
-Grupo de jovens realizou rituais estranhos em praça pública. Investigação confirmou que eram encenações teatrais sem qualquer ligação com práticas perigosas. 
-A população ficou preocupada, mas a prefeitura não tomou medidas adicionais. Os investigadores registraram cada detalhe com rigor, documentando toda a atividade.
-</p>
-
+  <img src="imagens/ritual.png" alt="Ritual">
+  <div class="caso-content">
+    <h2>Ritual Misterioso</h2>
+    <p>
+    Observações de jovens realizando rituais teatrais em espaços públicos foram documentadas. 
+    A equipe confirmou se tratar de encenações sem qualquer risco real, mas que despertaram preocupação social. 
+    Cada detalhe foi registrado, incluindo movimentação e comportamento dos participantes, resultando em um estudo minucioso de ações culturais juvenis.
+    </p>
+  </div>
 </div>
-</div>
-
-<hr>
 
 <footer>
-
-Contato oficial da equipe:  
-<a href="mailto:investigadoresSANTA@gmail.com">investigadoresSANTA@gmail.com</a>
-
+  Contato oficial da equipe:  
+  <a href="mailto:investigadoresSANTA@gmail.com">investigadoresSANTA@gmail.com</a>
 </footer>
 
-<!-- áudio secreto -->
-
+<!-- Áudio secreto -->
 <audio id="morseAudio" src="audio/codigoMorse.mp3" preload="auto"></audio>
 
 <script>
-
 // mensagem secreta no console
-
 console.log("Se você está lendo isso, significa que está procurando mais fundo.");
 console.log("Nem todos os relatórios foram publicados.");
 console.log("Procure onde a cidade guarda sua água.");
 
 // clique no poço abre relatório
-
 document.getElementById("poco").addEventListener("click",function(){
-window.open("relatorio.html","_blank");
+  window.open("relatorio.html","_blank");
 });
 
 // áudio secreto hospital
+const morseAudio = document.getElementById("morseAudio");
+const hospitalImg = document.querySelector('img[alt="Hospital"]');
 
-const morseAudio=document.getElementById("morseAudio");
-const hospitalImg=document.querySelector('img[alt="Hospital"]');
-
-hospitalImg.addEventListener("click",function(){
-morseAudio.currentTime=0;
-morseAudio.play();
+hospitalImg.addEventListener("click", function(){
+  morseAudio.currentTime = 0;
+  morseAudio.play();
 });
-
 </script>
-<!-- FORÇAR DEPLOY: atualização de teste -->
 
 </body>
-<!-- FORÇAR DEPLOY: atualização de teste -->
 </html>
-
-<!-- atualização forçada -->
